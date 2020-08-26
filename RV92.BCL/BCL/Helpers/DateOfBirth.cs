@@ -4,12 +4,6 @@ namespace Bcl.Helpers
 {
     public static class DateOfBirth
     {
-        public static double CalculateAgeFromDateOfBirth(DateTime dateOfBirth)
-        {
-            var span = DateTime.Now.Subtract(dateOfBirth);
-            return (span.TotalDays / 365);
-        }
-
         public static double CalculateAgeInYearsFromDateOfBirth(DateTime dateOfBirth)
         {
             var span = DateTime.Now.Subtract(dateOfBirth);
