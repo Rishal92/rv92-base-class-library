@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
-namespace Bcl.Helpers
+namespace Bcl.Yelpers
 {
-    public static class DateOfBirth
+    public static class DateOfBirthYelper
     {
+        public static bool IsValidDateOfBirth(string dob)
+        {
+            return Regex.IsMatch(dob, @"^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$");
+        }
+
         public static double CalculateAgeInYearsFromDateOfBirth(DateTime dateOfBirth)
         {
             var span = DateTime.Now.Subtract(dateOfBirth);
